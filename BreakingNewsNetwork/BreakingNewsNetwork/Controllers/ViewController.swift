@@ -13,6 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .systemPink
+        
+        NetworkManager.shared.getNews { (news) in
+            guard let news = news else { return }
+            print(news[0].title)
+        }
     }
 
 
