@@ -40,9 +40,9 @@ class ShadowImageView: UIView {
     
     
     func setupView() {
-        setupConstraints()
         addSubview(baseView)
         baseView.addSubview(imageView)
+        setupConstraints()
     }
     
     func setupConstraints() {
