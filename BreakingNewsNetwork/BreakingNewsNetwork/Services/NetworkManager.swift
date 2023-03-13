@@ -15,7 +15,7 @@ class NetworkManager {
     
     // MARK: Constans
     private let baseUrl = "https://newsapi.org/v2/"
-    private let UATopHeadline = "top-headlines?country=ua"
+    private let UATopHeadline = "top-headlines?country=us"
     
     // MARK: getNewsRequest
     func getNews(completion: @escaping ([News]?) -> Void) {

@@ -80,5 +80,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.newsVM = news
         return cell ?? UITableViewCell()
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let news = viewModel.newsVM[indexPath.row]
+        guard let url = URL(string: news.url) else {
+            return
+        }
+        let config = SFSafariViewController.Configuration()
+        let safariViewController = SFSafariViewController(url: url, configuration: config)
+        safariViewController.modalPresentationStyle = .formSheet
+        present(safariViewController, animated: true)
+    }
 }
 
