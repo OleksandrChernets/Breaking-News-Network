@@ -19,8 +19,8 @@ class NetworkManager {
     
     // MARK: getNewsRequest
     func getNews(completion: @escaping ([News]?) -> Void) {
-        let url = "\(baseUrl)\(UATopHeadline)&apiKey=\(APIKey.key)"
-        guard let url = URL(string: url) else {return}
+        let urlString = "\(baseUrl)\(UATopHeadline)&apiKey=\(APIKey.key)"
+        guard let url = URL(string: urlString) else {return}
         
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             guard let data = data, error == nil else {

@@ -23,7 +23,7 @@ final class HeaderView: UIView {
         v.translatesAutoresizingMaskIntoConstraints = false
         v.contentMode = .scaleAspectFit
         let config = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .bold)
-        v.image = UIImage(systemName: "largecircle.fill.circle", withConfiguration: config)
+        v.image = UIImage(systemName: "largecircle.fill.circle", withConfiguration: config)?.withRenderingMode(.alwaysOriginal)
         return v
     }()
     
@@ -31,7 +31,7 @@ final class HeaderView: UIView {
         let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
         let config = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .bold)
-        v.image = UIImage(systemName: "plus", withConfiguration: config)?.withRenderingMode(.alwaysOriginal)
+        v.image = UIImage(systemName: "plus.app", withConfiguration: config)?.withRenderingMode(.alwaysOriginal)
         return v
     }()
     
